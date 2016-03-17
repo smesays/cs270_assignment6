@@ -5,10 +5,12 @@ class EventsController < ApplicationController
     
     # GET /events
     def show_all_events
+        @events = Event.all
     end
     
     # GET /events/:id
     def show_event
+        @event = Event.find(params[:id]) # pass id from URL to param hash
     end
     
     # GET /events/:id/edit

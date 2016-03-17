@@ -5,10 +5,12 @@ class LocationsController < ApplicationController
     
     # GET /locations
     def show_all_locations
+        @locations = Location.all
     end
     
     # GET /locations/:id
     def show_location
+        @location = Location.find(params[:id]) # pass id from URL to param hash
     end
     
     # GET /locations/:id/edit

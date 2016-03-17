@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>        
+    </tr>
+    <% @locations.each do |i| %>
+        <tr>
+            <td><%= i.name %></td>
+            <td><%= i.description %></td>
+        </tr>
+    <% end %>
+</table>
